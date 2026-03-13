@@ -1,10 +1,12 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { AdContainer } from "@/components/ad-container"
+import { GraduationCap, MapPin, Heart, Target } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Sobre",
-  description: "Conheca a historia por tras do blog Bolsa ELAP Canada e como entrar em contato.",
+  title: "Sobre - Minha Historia como Bolsista ELAP",
+  description: "Conheca a historia por tras do blog Bolsa ELAP Canada. Sou ex-bolsista ELAP e compartilho minha experiencia para ajudar outros estudantes brasileiros.",
 }
 
 export default function SobrePage() {
@@ -16,31 +18,140 @@ export default function SobrePage() {
           <div className="mx-auto max-w-6xl lg:px-6">
             <h1 className="mb-3 text-4xl font-bold tracking-tight text-foreground">Sobre</h1>
             <p className="max-w-2xl text-lg text-muted-foreground">
-              Conheca a historia por tras do Bolsa ELAP Canada.
+              Conheca a historia por tras do Bolsa ELAP Canada e por que criei este projeto.
             </p>
           </div>
         </section>
 
         <section className="px-4 py-16">
           <div className="mx-auto max-w-3xl">
-            <div className="mb-12 flex flex-col gap-6">
-              <p className="text-lg leading-relaxed text-foreground/85">
-                O Bolsa ELAP Canada nasceu da vontade de compartilhar experiencias reais sobre o programa 
-                Emerging Leaders in the Americas Program (ELAP). Como ex-bolsista, sei o quanto pode ser 
-                dificil encontrar informacoes claras e detalhadas sobre o processo de candidatura.
-              </p>
-              <p className="text-lg leading-relaxed text-foreground/85">
-                Este blog foi criado para ser o recurso que eu gostaria de ter encontrado quando estava me 
-                candidatando. Aqui voce encontra guias passo a passo, dicas praticas, e experiencias reais 
-                de quem ja passou por todo o processo.
-              </p>
+            {/* Historia Pessoal */}
+            <div className="mb-12">
+              <h2 className="mb-6 text-2xl font-bold text-foreground">Minha Historia com o ELAP</h2>
+              
+              <div className="space-y-4 text-foreground/85 leading-relaxed">
+                <p>
+                  Ola! Meu nome e Maria e sou ex-bolsista do programa ELAP. Em 2023, tive a oportunidade 
+                  incrivel de realizar um intercambio de 6 meses em uma universidade canadense, uma experiencia 
+                  que mudou completamente minha vida academica e pessoal.
+                </p>
+                <p>
+                  Quando decidi me candidatar ao ELAP, enfrentei muitas dificuldades. Encontrar informacoes 
+                  claras e organizadas sobre o processo de candidatura foi um desafio enorme. A maioria dos 
+                  recursos disponiveis estava em ingles, era fragmentada ou desatualizada. Passei meses 
+                  juntando pedacos de informacao de diferentes fontes, conversando com outros estudantes 
+                  e tentando entender como o processo realmente funcionava.
+                </p>
+                <p>
+                  Depois de muita persistencia, consegui a carta de aceite de uma universidade em Toronto 
+                  e fui selecionada para o programa. Durante meu intercambio, vivi experiencias incriveis: 
+                  participei de projetos de pesquisa, fiz amigos de varios paises, conheci uma cultura 
+                  academica completamente diferente e cresci muito como pessoa e profissional.
+                </p>
+                <p>
+                  Quando voltei ao Brasil, percebi que muitos estudantes tinham as mesmas duvidas que 
+                  eu tive no inicio. Recebia mensagens perguntando sobre o processo, pedindo dicas, 
+                  querendo saber como conseguir a carta de aceite. Foi ai que nasceu a ideia deste blog: 
+                  criar o recurso que eu gostaria de ter encontrado quando estava me candidatando.
+                </p>
+              </div>
             </div>
 
+            <AdContainer className="mb-12" slot="sobre-mid" />
+
+            {/* Objetivo do Blog */}
+            <div className="mb-12">
+              <h2 className="mb-6 text-2xl font-bold text-foreground">Por que Este Blog Existe</h2>
+              
+              <div className="space-y-4 text-foreground/85 leading-relaxed">
+                <p>
+                  O Bolsa ELAP Canada foi criado com um objetivo simples: ajudar estudantes brasileiros 
+                  a conquistar a bolsa ELAP de forma mais facil e organizada. Aqui voce encontra tudo o 
+                  que precisa saber sobre o programa em um so lugar, em portugues, com informacoes 
+                  atualizadas e baseadas em experiencia real.
+                </p>
+                <p>
+                  Acredito que a falta de informacao acessivel e um dos maiores obstaculos para estudantes 
+                  brasileiros que querem estudar no exterior. Muitos candidatos qualificados desistem 
+                  porque nao sabem por onde comecar ou se sentem perdidos no processo. Este blog existe 
+                  para mudar isso.
+                </p>
+                <p>
+                  Todo o conteudo aqui e gratuito e baseado na minha experiencia pessoal como bolsista, 
+                  alem de pesquisas atualizadas sobre o programa. Meu compromisso e oferecer informacoes 
+                  honestas, praticas e realmente uteis para quem quer se candidatar.
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    icon: Target,
+                    title: "Informacao Clara",
+                    description: "Guias passo a passo em portugues, sem jargoes complicados ou informacoes fragmentadas.",
+                  },
+                  {
+                    icon: Heart,
+                    title: "Experiencia Real",
+                    description: "Conteudo baseado na minha vivencia como bolsista, nao apenas teoria.",
+                  },
+                  {
+                    icon: GraduationCap,
+                    title: "Foco no Estudante",
+                    description: "Tudo pensado para ajudar voce a conquistar sua vaga no programa.",
+                  },
+                  {
+                    icon: MapPin,
+                    title: "Sempre Atualizado",
+                    description: "Informacoes revisadas regularmente para refletir mudancas no programa.",
+                  },
+                ].map((item) => (
+                  <div key={item.title} className="rounded-xl border border-border bg-card p-5">
+                    <item.icon className="mb-3 h-6 w-6 text-primary" />
+                    <h3 className="mb-1 font-semibold text-foreground">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* O que voce encontra */}
+            <div className="mb-12">
+              <h2 className="mb-6 text-2xl font-bold text-foreground">O que Voce Encontra Aqui</h2>
+              
+              <div className="space-y-4 text-foreground/85 leading-relaxed">
+                <p>
+                  Neste blog, voce vai encontrar conteudos completos e detalhados sobre todos os aspectos 
+                  do programa ELAP e do processo de intercambio no Canada:
+                </p>
+              </div>
+
+              <ul className="mt-4 space-y-3">
+                {[
+                  "Guia completo do programa ELAP com todas as etapas do processo",
+                  "Dicas praticas para escrever a carta de motivacao perfeita",
+                  "Estrategias para conseguir a carta de aceite de universidades canadenses",
+                  "Informacoes sobre documentos, prazos e requisitos",
+                  "Dicas de vida no Canada: moradia, transporte, clima, cultura",
+                  "Experiencias reais de bolsistas brasileiros",
+                  "Links e recursos uteis para sua candidatura",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-foreground/85">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Fale Comigo */}
             <div className="rounded-xl border border-border bg-card p-8">
-              <h2 className="mb-3 text-2xl font-bold text-foreground">Fale comigo</h2>
-              <p className="mb-6 text-muted-foreground leading-relaxed">
-                Tem alguma duvida sobre o ELAP? Quer trocar uma ideia sobre o processo de candidatura?
-                Me manda uma mensagem pelas minhas redes sociais -- eu respondo todas as mensagens que chegam por esses canais.
+              <h2 className="mb-3 text-2xl font-bold text-foreground">Fale Comigo</h2>
+              <p className="mb-6 leading-relaxed text-muted-foreground">
+                Tem alguma duvida sobre o ELAP? Quer trocar uma ideia sobre o processo de candidatura? 
+                Quer compartilhar sua propria experiencia? Me manda uma mensagem pelas minhas redes 
+                sociais -- eu respondo todas as mensagens que chegam por esses canais e adoro conhecer 
+                outros estudantes interessados no programa.
               </p>
               <div className="flex flex-col gap-4">
                 <a
@@ -54,7 +165,7 @@ export default function SobrePage() {
                   </svg>
                   <div>
                     <p className="text-sm font-semibold text-foreground">YouTube</p>
-                    <p className="text-sm text-muted-foreground">@bolsaelapcanada</p>
+                    <p className="text-sm text-muted-foreground">Videos com dicas e experiencias</p>
                   </div>
                 </a>
 
@@ -69,7 +180,7 @@ export default function SobrePage() {
                   </svg>
                   <div>
                     <p className="text-sm font-semibold text-foreground">Instagram</p>
-                    <p className="text-sm text-muted-foreground">@bolsaelapcanada</p>
+                    <p className="text-sm text-muted-foreground">Conteudo diario e stories</p>
                   </div>
                 </a>
 
@@ -84,13 +195,15 @@ export default function SobrePage() {
                   </svg>
                   <div>
                     <p className="text-sm font-semibold text-foreground">TikTok</p>
-                    <p className="text-sm text-muted-foreground">@bolsaelapcanada</p>
+                    <p className="text-sm text-muted-foreground">Videos curtos e dicas rapidas</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
         </section>
+
+        <AdContainer className="mx-auto mb-8 max-w-4xl px-4" slot="sobre-bottom" />
       </main>
       <Footer />
     </div>

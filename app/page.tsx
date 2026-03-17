@@ -3,7 +3,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HeroSection, GuideSection, AboutPreview } from "@/components/home-sections"
 import { PostCard } from "@/components/post-card"
-import { AdContainer } from "@/components/ad-container"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
@@ -22,8 +21,6 @@ export default async function HomePage() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-
-        <AdContainer className="mx-auto my-8 max-w-4xl px-4" slot="home-top" />
 
         {/* Latest Posts */}
         <section className="px-4 py-16 lg:py-20">
@@ -75,13 +72,12 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <AdContainer className="mx-auto mb-8 max-w-4xl px-4" slot="home-mid" />
 
         <GuideSection />
 
         <AboutPreview />
 
-        <AdContainer className="mx-auto my-8 max-w-4xl px-4" slot="home-bottom" />
+
       </main>
       <Footer />
     </div>

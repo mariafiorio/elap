@@ -1,7 +1,6 @@
 import { createClient } from "@/lib/supabase/server"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { AdContainer } from "@/components/ad-container"
 import Link from "next/link"
 import { Calendar, ArrowLeft, User, Tag } from "lucide-react"
 import { notFound } from "next/navigation"
@@ -116,14 +115,11 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             )}
 
-            <AdContainer className="mb-10" slot="post-top" />
 
             <div
               className="prose prose-lg max-w-none text-foreground prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-foreground prose-p:leading-relaxed prose-p:text-foreground/85 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground prose-li:text-foreground/85"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
-
-            <AdContainer className="mt-10" slot="post-bottom" />
 
             <div className="mt-12 border-t border-border pt-8">
               <Link

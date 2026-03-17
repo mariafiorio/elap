@@ -32,7 +32,6 @@ export default async function BlogPage() {
           </div>
         </section>
 
-        <AdContainer className="mx-auto my-8 max-w-4xl px-4" slot="blog-top" />
 
         <section className="px-4 py-10">
           <div className="mx-auto max-w-6xl lg:px-6">
@@ -60,7 +59,6 @@ export default async function BlogPage() {
           </div>
         </section>
 
-        <AdContainer className="mx-auto mb-8 max-w-4xl px-4" slot="blog-bottom" />
       </main>
       <Footer />
     </div>

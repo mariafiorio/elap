@@ -152,7 +152,7 @@ export default function SobrePage() {
               </p>
               <div className="flex flex-col gap-4">
                 <a
-                  href="https://youtube.com/@bolsaelapcanada"
+                  href="https://youtube.com/@mariafidaily"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-border bg-secondary/50 px-5 py-4 transition-colors hover:bg-secondary"
@@ -167,7 +167,7 @@ export default function SobrePage() {
                 </a>
 
                 <a
-                  href="https://instagram.com/bolsaelapcanada"
+                  href="https://instagram.com/mariafidaily"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-border bg-secondary/50 px-5 py-4 transition-colors hover:bg-secondary"
@@ -182,7 +182,7 @@ export default function SobrePage() {
                 </a>
 
                 <a
-                  href="https://tiktok.com/@bolsaelapcanada"
+                  href="https://tiktok.com/@mariafidailyy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-lg border border-border bg-secondary/50 px-5 py-4 transition-colors hover:bg-secondary"

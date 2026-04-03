@@ -30,19 +30,19 @@ export default function SobrePage() {
 
               <div className="space-y-4 text-foreground/85 leading-relaxed">
                 <p>
-                  Ola! Meu nome e Maria e sou ex-bolsista do programa ELAP. Em 2023, tive a oportunidade
-                  incrivel de realizar um intercambio de 6 meses em uma universidade canadense, uma experiencia
+                  Ola! Meu nome e Maria e sou ex-bolsista do programa ELAP. Em 2026, tive a oportunidade
+                  incrivel de realizar um intercambio de 4 meses em uma universidade canadense, uma experiencia
                   que mudou completamente minha vida academica e pessoal.
                 </p>
                 <p>
                   Quando decidi me candidatar ao ELAP, enfrentei muitas dificuldades. Encontrar informacoes
                   claras e organizadas sobre o processo de candidatura foi um desafio enorme. A maioria dos
                   recursos disponiveis estava em ingles, era fragmentada ou desatualizada. Passei meses
-                  juntando pedacos de informacao de diferentes fontes, conversando com outros estudantes
+                  juntando pedaços de informacao de diferentes fontes, conversando com outros estudantes
                   e tentando entender como o processo realmente funcionava.
                 </p>
                 <p>
-                  Depois de muita persistencia, consegui a carta de aceite de uma universidade em Toronto
+                  Depois de muita persistencia, consegui a carta de aceite na Brock University
                   e fui selecionada para o programa. Durante meu intercambio, vivi experiencias incriveis:
                   participei de projetos de pesquisa, fiz amigos de varios paises, conheci uma cultura
                   academica completamente diferente e cresci muito como pessoa e profissional.
